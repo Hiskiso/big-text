@@ -1,0 +1,40 @@
+.settings {
+    z-index: 100000;
+    position: absolute;
+    background: #dadadada;
+    padding: 7px;
+    border-radius: 12px;
+    margin: 4px;
+}
+
+.settings:hover {
+    opacity: 1;
+}
+
+#bigText {
+    /* display: flex; */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    /* overflow: hidden; */
+    font-family: sans-serif;
+    }
+#text{
+    position: absolute;
+}
+
+#hide {
+    padding: 61px;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+body {
+    display: block;
+    margin: 0;
+    overflow: hidden;
+}
