@@ -14,8 +14,8 @@
 #bigText {
     /* display: flex; */
     position: absolute;
-    height: 100%;
-    width: 100%;
+    height: 100dvh;
+    width: 100dvw;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -25,6 +25,8 @@
     }
 #text{
     position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 #hide {

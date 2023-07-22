@@ -7,7 +7,7 @@ document.getElementById("inpText").addEventListener("input", ({target})=>{docume
 // window.addEventListener("load", start)
 document.getElementById("hide").addEventListener("click", ()=>{document.getElementById("settings").style.opacity = isHide? 0: 1; isHide = !isHide})
 fontEl = document.getElementById("bigText")
-
+TEXT_SPEED = 1
 function move() {
     var wrapper = document.querySelector('#bigText'),
     marquee = document.querySelector('#text'),   
@@ -17,7 +17,7 @@ function move() {
     if( currentTX[4] === undefined ) {
       currentTX = -1;
     } else {
-      currentTX = parseFloat(currentTX[4]) - 1;
+      currentTX = parseFloat(currentTX[4]) - TEXT_SPEED;
     }
     
     if(-currentTX >= marqueeWidth) {
@@ -27,7 +27,7 @@ function move() {
       marquee.style.transform = 'translateX(' + currentTX + 'px)';
     }
   }
-var interval = setInterval(move, 3);
+var interval = setInterval(move, 10);
 function fontColor({target}) {
     
     let value = target.value
@@ -40,8 +40,7 @@ function backgroundColor({target}) {
 
 function speedChange({target}) {
 
-clearInterval(interval)
-interval = setInterval(move, target.value)
+  TEXT_SPEED = target.value
 console.log(target.value);
 }
 function fontSize({target}) {
